@@ -1,8 +1,7 @@
 package view;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 import model.Calculator;
+import java.util.Scanner;
 
 public class Main {
 
@@ -32,88 +31,81 @@ public class Main {
 
 			option = scanner.next();
 
-			try {
-				switch (option) {
-					case "1":
-						System.out.print("Digite o primeiro número: ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o segundo número: ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.sum(num1, num2));
-						break;
-					case "2":
-						System.out.print("Digite o primeiro número: ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o segundo número: ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.sub(num1, num2));
-						break;
-					case "3":
-						System.out.print("Digite o primeiro número: ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o segundo número: ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.div(num1, num2));
-						break;
-					case "4":
-						System.out.print("Digite o primeiro número: ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o segundo número: ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.mult(num1, num2));
-						break;
-					case "5":
-						System.out.print("Digite o primeiro número: ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o segundo número: ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.mod(num1, num2));
-						break;
-					case "6":
-						System.out.print("Digite o número: ");
-						num1 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.factorial(num1));
-						break;
-					case "7":
-						System.out.print("Digite o número decimal: ");
-						intNum = scanner.nextInt();
-						System.out.println("Resultado: " + calc.decimalToBinary(intNum));
-						break;
-					case "8":
-						System.out.print("Digite o número decimal: ");
-						intNum = scanner.nextInt();
-						System.out.println("Resultado: " + calc.decimalToHexadecimal(intNum));
-						break;
-					case "9":
-						System.out.print("Digite o número (N): ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o percentual (X): ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.addPercentage(num1, num2));
-						break;
-					case "10":
-						System.out.print("Digite o número (N): ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o percentual (X): ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.subtractPercentage(num1, num2));
-						break;
-					case "11":
-						System.out.print("Digite o percentual (X): ");
-						num1 = scanner.nextDouble();
-						System.out.print("Digite o número (N): ");
-						num2 = scanner.nextDouble();
-						System.out.println("Resultado: " + calc.percentageOf(num2, num1));
-						break;
-					case "N":
-						System.out.println("Saindo...");
-						break;
-				}
-			} catch (InputMismatchException e) {
-				System.out.println("Erro: Entrada inválida. Por favor, digite um número.");
-				scanner.nextLine(); // Clear the buffer
-			} catch (IllegalArgumentException e) {
-				System.out.println("Erro: " + e.getMessage());
+			switch (option) {
+				case "1":
+					System.out.print("Digite o primeiro número: ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o segundo número: ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.sum(num1, num2));
+					break;
+				case "2":
+					System.out.print("Digite o primeiro número: ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o segundo número: ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.sub(num1, num2));
+					break;
+				case "3":
+					System.out.print("Digite o primeiro número: ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o segundo número: ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.div(num1, num2));
+					break;
+				case "4":
+					System.out.print("Digite o primeiro número: ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o segundo número: ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.mult(num1, num2));
+					break;
+				case "5":
+					System.out.print("Digite o primeiro número: ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o segundo número: ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.mod(num1, num2));
+					break;
+				case "6":
+					System.out.print("Digite o número: ");
+					num1 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.factorial(num1));
+					break;
+				case "7":
+					System.out.print("Digite o número decimal: ");
+					intNum = scanner.nextInt();
+					System.out.println("Resultado: " + calc.decimalToBinary(intNum));
+					break;
+				case "8":
+					System.out.print("Digite o número decimal: ");
+					intNum = scanner.nextInt();
+					System.out.println("Resultado: " + calc.decimalToHexadecimal(intNum));
+					break;
+				case "9":
+					System.out.print("Digite o número (N): ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o percentual (X): ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.addPercentage(num1, num2));
+					break;
+				case "10":
+					System.out.print("Digite o número (N): ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o percentual (X): ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.subtractPercentage(num1, num2));
+					break;
+				case "11":
+					System.out.print("Digite o percentual (X): ");
+					num1 = scanner.nextDouble();
+					System.out.print("Digite o número (N): ");
+					num2 = scanner.nextDouble();
+					System.out.println("Resultado: " + calc.percentageOf(num2, num1));
+					break;
+				case "N":
+					System.out.println("Saindo...");
+					break;
 			}
 			System.out.println();
 		} while (!option.equalsIgnoreCase("N"));
@@ -122,7 +114,5 @@ public class Main {
 		for (String operation : calc.getResults()) {
 			System.out.println(operation);
 		}
-		
-		scanner.close();
 	}
 }
